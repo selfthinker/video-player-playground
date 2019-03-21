@@ -1,0 +1,34 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Plyr via Div - Video Players Playground
+{% endblock %}
+
+{% block pageScripts %}
+<script src="https://cdn.plyr.io/3.5.2/plyr.js"></script>
+<!-- <script src="https://cdn.plyr.io/3.5.2/plyr.polyfilled.js"></script> -->
+<script>
+  const player = new Plyr(document.querySelector('.js-player'));
+  // const players = Plyr.setup('.js-player');
+</script>
+{% endblock %}
+
+{% block pageStyles %}
+<link rel="stylesheet" href="https://cdn.plyr.io/3.5.2/plyr.css" />
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Plyr via Div
+      </h1>
+
+      <div class="js-player" data-plyr-provider="youtube" data-plyr-embed-id="9dWawO6gdT8"></div>
+
+    </div>
+</div>
+
+{% endblock %}

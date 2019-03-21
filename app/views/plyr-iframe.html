@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Plyr via iframe - Video Players Playground
+{% endblock %}
+
+{% block pageScripts %}
+<script src="https://cdn.plyr.io/3.5.2/plyr.js"></script>
+<!-- <script src="https://cdn.plyr.io/3.5.2/plyr.polyfilled.js"></script> -->
+<script>
+  const player = new Plyr(document.querySelector('.js-player'));
+  // const players = Plyr.setup('.js-player');
+</script>
+{% endblock %}
+
+{% block pageStyles %}
+<link rel="stylesheet" href="https://cdn.plyr.io/3.5.2/plyr.css" />
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Plyr via iframe
+      </h1>
+
+      <div class="plyr__video-embed js-player">
+        <!-- srce="https://www.youtube.com/embed/9dWawO6gdT8?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9dWawO6gdT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    </div>
+</div>
+
+{% endblock %}

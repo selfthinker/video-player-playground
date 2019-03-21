@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Video.js - Video Players Playground
+{% endblock %}
+
+{% block pageScripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.5.0/video.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.0/Youtube.min.js"></script>
+<!-- <script src="/public/javascripts/Youtube.min.js"></script> -->
+{% endblock %}
+
+{% block pageStyles %}
+<!-- <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.5.0/video-js.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Video.js
+      </h1>
+
+      <p>This doesn't work right now. The YouTube plugin throws a JavaScript error.</p>
+
+      <video
+        id="vid1"
+        class="video-js vjs-default-skin"
+        width="530" height="315"
+        data-setup='{"techOrder":["youtube"], "src":"http://www.youtube.com/watch?v=9dWawO6gdT8"}'
+      >
+        <!-- data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=9dWawO6gdT8"}], "youtube": { "ytControls": 2, "iv_load_policy": 1 } }' -->
+      </video>
+
+    </div>
+</div>
+
+{% endblock %}

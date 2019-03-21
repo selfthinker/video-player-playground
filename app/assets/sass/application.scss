@@ -1,0 +1,29 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Override the govuk-frontend font stack
+$govuk-font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+
+// Remove crown logo
+.govuk-header__logotype-crown {
+	display: none;
+}
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+video,
+audio,
+iframe {
+  max-width: 100%;
+}

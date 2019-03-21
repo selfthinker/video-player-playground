@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  YouTube player via JS - Video Players Playground
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        YouTube player via JS
+      </h1>
+
+      <div id="player"></div>
+
+      <script>
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            width: '560',
+            height: '315',
+            videoId: '9dWawO6gdT8'
+          });
+        }
+      </script>
+
+    </div>
+</div>
+
+{% endblock %}

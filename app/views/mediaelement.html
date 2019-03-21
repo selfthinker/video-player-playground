@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  MediaElement.js - Video Players Playground
+{% endblock %}
+
+{% block pageScripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement-and-player.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement.min.js"></script> -->
+{% endblock %}
+
+{% block pageStyles %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelementplayer.min.css" />
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        MediaElement.js
+      </h1>
+
+      <video width="640" height="360" class="mejs__player" preload="none">
+        <source type="video/youtube" src="http://www.youtube.com/watch?v=9dWawO6gdT8??cc_load_policy=3&iv_load_policy=3" />
+      </video>
+
+    </div>
+</div>
+
+{% endblock %}

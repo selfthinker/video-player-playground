@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Able Player - Video Players Playground
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+  var youTubeDataAPIKey = "AIzaSyCRAinZv6FYcJcVQoJwBxtnuzNqlWsz6ms";
+  var googleApiReady = false;
+  function initGoogleClientApi() {
+    googleApiReady = true;
+  }
+</script>
+<script src="http://apis.google.com/js/client.js?onload=initGoogleClientApi"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script src="/public/javascripts/ableplayer-all.js"></script>
+{% endblock %}
+
+{% block pageStyles %}
+<link rel="stylesheet" href="/public/stylesheets/ableplayer.min.css" />
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Able Player
+      </h1>
+
+      <video id="video2" data-able-player preload="auto" data-youtube-id="9dWawO6gdT8" width="560" height="315">
+      </video>
+
+    </div>
+</div>
+
+{% endblock %}

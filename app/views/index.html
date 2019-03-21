@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Video Players Playground
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Playground for Video Players
+      </h1>
+      <p>
+        Implementation of various video players to test them against various criteria and play around with them.
+      </p>
+
+      <h2 class="govuk-heading-m">Players</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.gov.uk/guidance/help-and-support-for-self-assessment">Nomensa's Accessible Media Player on gov.uk</a> (first video on the page)</li>
+        <li><a href="/youtube-iframe.html">YouTube player</a> (and the same <a href="/youtube-js.html">implemented via JS</a>)</li>
+        <li><a href="/plyr-iframe.html">Plyr</a> (and the same <a href="/plyr-div.html">implemented via a Div</a>)</li>
+        <li><a href="/mediaelement.html">MediaElement.js</a></li>
+        <li><a href="/videojs.html">Video.js</a> (doesn't work)</li>
+        <li><a href="/able-player.html">Able Player</a></li>
+      </ul>
+
+    </div>
+</div>
+
+{% endblock %}
